@@ -9,8 +9,8 @@
     <title>Studio - Blamaps</title>
     
     
-    <script type="module" crossorigin src="./assets/index-ec8f5c38.js"></script>
-    <link rel="stylesheet" href="./assets/index-f835da07.css">
+    <script type="module" crossorigin src="./assets/index-ad882dd6.js"></script>
+    <link rel="stylesheet" href="./assets/index-47b0f64d.css">
   </head>
 
   <body>
@@ -21,19 +21,15 @@
       <div class="w-9 h-9 rounded-full bg-red-500"></div>
     </header>
     <main
-      class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row-reverse md:gap-12"
+      class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row-reverse md:gap-16"
     >
       <div class="md:flex-1 flex flex-col justify-start gap-6 mb-6">
         <div class="flex flex-col gap-4">
-          <div
-            class="w-full flex gap-2 items-center p-2 rounded-md cursor-pointer active:bg-red-200 active:text-red-800"
-          >
+          <div id="btn-studio-maps" class="btn-studio active">
             <div class="w-8 h-8 rounded-sm bg-red-500"></div>
             <div class="text-base select-none">Maps</div>
           </div>
-          <div
-            class="w-full flex gap-2 items-center p-2 rounded-md cursor-pointer active:bg-red-200 active:text-red-800"
-          >
+          <div id="btn-studio-data" class="btn-studio">
             <div class="w-8 h-8 rounded-sm bg-red-500"></div>
             <div class="text-base select-none">Data</div>
           </div>
@@ -44,10 +40,18 @@
         </div>
       </div>
       <div class="md:flex-[2] min-h-screen flex flex-col">
-        <div class="h-full grow">
-          <h1 class="text-3xl font-bold select-none">Maps</h1>
+        <div class="h-full flex-1">
+          <div class="flex justify-between items-center w-full">
+            <h1 id="h-studio-type" class="text-3xl font-bold select-none"></h1>
+            <button
+              class="bg-red-500 text-white text-xs px-6 py-2 rounded-full"
+            >
+              New Map
+            </button>
+          </div>
+          <ul id="list-studio" class="h-full mt-4"></ul>
         </div>
-        <div class="h-fit py-4 flex flex-col justify-start gap-2">
+        <footer class="h-fit py-4 flex flex-col justify-start gap-2">
           <div class="flex gap-3 justify-start">
             <a href="/changelog" class="text-lg">Changelog</a>
             <a href="/documentation" class="text-lg">Documentation</a>
@@ -57,7 +61,7 @@
             <a href="/terms" class="text-lg">Terms + Privacy</a>
             <div class="select-none">Blamaps</div>
           </div>
-        </div>
+        </footer>
       </div>
     </main>
   </body>
