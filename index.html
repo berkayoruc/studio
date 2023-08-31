@@ -9,8 +9,8 @@
     <title>Studio - Blamaps</title>
     
     
-    <script type="module" crossorigin src="./assets/index-0c17400d.js"></script>
-    <link rel="stylesheet" href="./assets/index-917f1b76.css">
+    <script type="module" crossorigin src="./assets/index-e47065b9.js"></script>
+    <link rel="stylesheet" href="./assets/index-99b434f3.css">
   </head>
 
   <body>
@@ -18,7 +18,7 @@
       class="sm:py-6 w-full max-w-7xl py-3 px-6 mx-auto flex items-center border-b border-b-gray-300 mb-6"
     >
       <h1 class="grow text-3xl select-none">Studio</h1>
-      <div class="w-9 h-9 rounded-full bg-red-500"></div>
+      <div id="reset-all" class="w-9 h-9 rounded-full bg-red-500"></div>
     </header>
     <main
       class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row-reverse md:gap-16"
@@ -48,6 +48,12 @@
               class="bg-red-500 text-white text-xs px-6 py-2 rounded-full font-medium"
             >
               New map
+            </button>
+            <button
+              id="btn-studio-new-data-source"
+              class="bg-red-500 text-white text-xs px-6 py-2 rounded-full font-medium hidden"
+            >
+              New source
             </button>
           </div>
           <ul id="list-studio" class="h-full mt-4"></ul>
