@@ -12,11 +12,24 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/maps-f9803e08.js"></script>
+    <script type="module" crossorigin src="../assets/maps-27a67c5a.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="../assets/index-75dd86bb.css">
+    <link rel="stylesheet" href="../assets/index-4b83c806.css">
   </head>
   <body>
-    <div id="mapContainer"></div>
+    <header
+      class="sm:py-6 w-full max-w-7xl py-3 px-6 mx-auto flex items-center border-b border-b-gray-300 mb-6"
+    >
+      <div class="flex grow items-center text-3xl gap-2 select-none">
+        <div id="btn-back-studio" class="cursor-pointer">&#8592;</div>
+        <h1>Map</h1>
+      </div>
+      <div id="reset-all" class="w-9 h-9 rounded-full bg-red-500"></div>
+    </header>
+    <main>
+      <div class="px-3">
+        <div class="rounded-xl overflow-clip" id="mapContainer"></div>
+      </div>
+    </main>
   </body>
 </html>
