@@ -10,11 +10,15 @@
       rel="stylesheet"
       href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     
     
-    <script type="module" crossorigin src="../assets/maps-eaad0218.js"></script>
+    <script type="module" crossorigin src="../assets/maps-0a6c1bd8.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="../assets/index-fe2bcdb9.css">
+    <link rel="stylesheet" href="../assets/index-5e77e084.css">
   </head>
   <body>
     <div class="flex flex-col h-[100svh]">
@@ -22,26 +26,44 @@
         class="sm:py-6 w-full max-w-7xl py-3 px-6 mx-auto flex items-center border-b border-b-gray-300 mb-6"
       >
         <div class="flex grow items-center text-3xl gap-2 select-none">
-          <div id="btn-back-studio" class="cursor-pointer">&#8592;</div>
+          <div
+            id="btn-back-studio"
+            class="cursor-pointer flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined">arrow_back</span>
+          </div>
           <h1>Map</h1>
         </div>
         <div id="reset-all" class="w-9 h-9 rounded-full bg-red-500"></div>
       </header>
       <main class="max-w-7xl mx-auto px-6 pb-6 grow w-full flex flex-col gap-4">
         <div class="rounded-xl overflow-clip" id="mapContainer"></div>
-        <div class="flex gap-2 w-full">
+        <div class="flex justify-between items-center w-full">
+          <!-- Heading Button -->
           <button
             id="btn-cancel-map"
-            class="flex-1 rounded-md bg-white border border-red-300 text-red-500 py-2 font-medium text-xl"
+            class="rounded-md bg-white border border-red-300 text-red-500 py-2 font-medium text-lg px-4"
           >
             Cancel
           </button>
-          <button
-            id="btn-save-map"
-            class="flex-1 rounded-md bg-red-500 text-white py-2 font-medium text-xl"
-          >
-            Save
-          </button>
+
+          <!-- Trailing Button Group -->
+          <div class="flex space-x-2">
+            <button
+              id="btn-edit-map"
+              class="rounded-md bg-white border border-red-300 text-red-500 py-2 font-medium text-lg px-4 flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined xs:hidden">edit</span>
+              <span class="xs:block hidden">Edit</span>
+            </button>
+            <button
+              id="btn-save-map"
+              class="rounded-md bg-red-500 text-white py-2 font-medium text-lg px-4 flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined xs:hidden">save</span>
+              <span class="xs:block hidden">Save</span>
+            </button>
+          </div>
         </div>
       </main>
     </div>
