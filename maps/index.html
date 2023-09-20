@@ -16,9 +16,9 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/maps-3c09069a.js"></script>
+    <script type="module" crossorigin src="../assets/maps-08638af6.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/getDataSources-586408e8.js">
-    <link rel="stylesheet" href="../assets/index-c4f07780.css">
+    <link rel="stylesheet" href="../assets/index-fd612842.css">
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -52,12 +52,31 @@
       </header>
       <main class="max-w-7xl mx-auto px-6 pb-6 grow w-full flex flex-col gap-4">
         <div class="rounded-xl overflow-clip h-full relative">
+          <button
+            id="btn-open-tree"
+            class="w-fit hidden gap-1 px-2 py-1 rounded text-xs items-center bg-red-950 bg-opacity-75 text-white backdrop-blur z-10 left-4 top-4 absolute cursor-pointer"
+          >
+            <span class="material-symbols-outlined text-lg">
+              keyboard_double_arrow_right
+            </span>
+            <span>Open</span>
+          </button>
           <div
+            id="tree-layer-source-container"
             class="absolute z-10 my-2 left-2 h-minus8 w-80 bg-white bg-opacity-25 backdrop-blur-sm rounded"
           >
             <div
-              class="m-2 w-minus8 h-minus8 bg-red-900 bg-opacity-95 rounded flex flex-col text-white"
+              class="m-2 w-minus8 h-minus8 bg-red-950 bg-opacity-95 rounded flex flex-col text-white"
             >
+              <button
+                id="btn-collapse-tree"
+                class="w-fit mb-2 flex gap-1 px-2 py-1 rounded text-xs items-center bg-white bg-opacity-25"
+              >
+                <span class="material-symbols-outlined text-lg">
+                  keyboard_double_arrow_left
+                </span>
+                <span>Hide</span>
+              </button>
               <div class="flex flex-col grow h-screen overflow-y-scroll">
                 <!-- SOURCES -->
                 <div
