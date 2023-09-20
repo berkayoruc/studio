@@ -16,9 +16,9 @@
     />
     
     
-    <script type="module" crossorigin src="../assets/maps-0a6c1bd8.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="../assets/index-5e77e084.css">
+    <script type="module" crossorigin src="../assets/maps-3c09069a.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/getDataSources-586408e8.js">
+    <link rel="stylesheet" href="../assets/index-c4f07780.css">
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -51,7 +51,45 @@
         <div id="reset-all" class="w-9 h-9 rounded-full bg-red-500"></div>
       </header>
       <main class="max-w-7xl mx-auto px-6 pb-6 grow w-full flex flex-col gap-4">
-        <div class="rounded-xl overflow-clip" id="mapContainer"></div>
+        <div class="rounded-xl overflow-clip h-full relative">
+          <div
+            class="absolute z-10 my-2 left-2 h-minus8 w-80 bg-white bg-opacity-25 backdrop-blur-sm rounded"
+          >
+            <div
+              class="m-2 w-minus8 h-minus8 bg-red-900 bg-opacity-95 rounded flex flex-col text-white"
+            >
+              <div class="flex flex-col grow h-screen overflow-y-scroll">
+                <!-- SOURCES -->
+                <div
+                  class="text-sm flex justify-between items-center w-full p-2"
+                >
+                  <h2 class="font-medium">Sources</h2>
+                  <div
+                    id="btn-add-source"
+                    class="rounded-sm w-32 bg-white px-2 py-1 bg-opacity-25 flex items-center justify-center cursor-pointer"
+                  >
+                    <span class="material-symbols-outlined mr-2">add</span>
+                    <span>Add Source</span>
+                  </div>
+                </div>
+                <!-- LAYERS -->
+                <div
+                  class="text-sm flex justify-between items-center w-full p-2"
+                >
+                  <h2 class="font-medium">Layers</h2>
+                  <div
+                    id="btn-add-layer"
+                    class="rounded-sm w-32 bg-white px-2 py-1 bg-opacity-25 items-center justify-center cursor-pointer hidden"
+                  >
+                    <span class="material-symbols-outlined mr-2">add</span>
+                    <span>Add Layer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="mapContainer"></div>
+        </div>
         <div class="flex justify-between items-center w-full">
           <!-- Heading Button -->
           <button
